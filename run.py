@@ -40,6 +40,8 @@ json = {
     'd': u'Fourth'
 }
 
+
+print "---- Creating object with a,b,c and d attributes ----"
 form = TestForm.from_json(json)
 print form.data
 
@@ -51,14 +53,23 @@ session.add(test)
 session.commit()
 
 test = session.query(Test).get(0)
+print test.__dict__
+
+
+
+print "---- Populating form from object ----"
+
+print TestForm(obj=test).data
+
+
+
 
 json_update = {
 	'b': u'I mess up',
 	'd': u'But I want to be first'
 }
 
-print test.__dict__
-
+print "---- Updating object attributes b and d ----"
 updated_form = TestForm.from_json(json_update, obj=test)
 
 print updated_form.data
