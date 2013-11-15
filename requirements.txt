@@ -1,0 +1,9 @@
+SQLAlchemy==0.8.3
+SQLAlchemy-Utils==0.20.0
+WTForms==1.0.5
+WTForms-Alchemy==0.8.5
+WTForms-Components==0.8.0
+WTForms-JSON==0.1.2
+argparse==1.2.1
+six==1.4.1
+wsgiref==0.1.2
